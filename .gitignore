@@ -31,3 +31,5 @@ build
 static/
 media/
 assets/
+requirementsdev.txt
+Info.md
