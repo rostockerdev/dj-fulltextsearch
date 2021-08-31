@@ -12,9 +12,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 ###########################################
 #     APPLICATION CONFIGURATION           #
 ###########################################
-LOCAL_APPS = []
+LOCAL_APPS = [
+    "quotes.apps.QuotesConfig",
+]
 
-THIRDPARTY_APPS = []
+THIRDPARTY_APPS = [
+    "debug_toolbar",
+]
 
 
 INSTALLED_APPS = [
