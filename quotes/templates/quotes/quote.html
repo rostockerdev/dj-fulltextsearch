@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Quote Search</title>
 </head>
 <body>
-    <h2>Quote:</h2>
+    <div class="container">
+        <h2 style="color: purple;">Search Quotes</h2>
+        <br><br>
+        {% if quotes %}
+            {% for quote in  quotes%}
+                <ul>
+                    <li>{{quote.quote}} -<b>by <i>{{quote.name}}</i></b></li>
+                </ul>
+            {% endfor %}
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+
+        {% comment %} <a href="{% url 'all_quotes' %}" class="btn btn-primary">All Quotes</a> {% endcomment %}
+        <br><br>
+    </div>
 </body>
 </html>

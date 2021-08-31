@@ -1,6 +1,7 @@
 black==21.8b0
 Django==3.2.6
 django-debug-toolbar==3.2.2
+Faker==8.12.1
 flake8==3.9.2
 isort==5.9.3
 pre-commit==2.14.1

@@ -1,6 +1,6 @@
 from decouple import config
 
-from core.settings.base import BASE_DIR
+from core.settings.base import MIDDLEWARE
 
 from .base import *
 
@@ -11,7 +11,9 @@ from .base import *
 SECRET_KEY = config("SECRET_KEY")
 DEBUG = config("DEBUG", default=False, cast=bool)
 ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
-
+MIDDLEWARE += [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+]
 
 ###########################################
 #        DATABASE CONFIGURATION           #
