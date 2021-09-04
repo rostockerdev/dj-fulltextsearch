@@ -1,7 +1,7 @@
 from django.urls import path
 
 from quotes.views.quote_list import QuoteList
-from quotes.views.quote_search_single_field import SearchQuoteSingleFieldList
+from quotes.views.quote_search_multi_field import SearchQuoteMultiFieldList
 
 app_name = "quotes"
 
@@ -14,5 +14,7 @@ urlpatterns = [
     # from quotes.views.quote_search import SearchQuoteList
     # path("search", SearchQuoteList.as_view(), name="search_quote"),
     # Search single field
-    path("search", SearchQuoteSingleFieldList.as_view(), name="search_quote"),
+    # from quotes.views.quote_search_single_field import SearchQuoteSingleFieldList
+    # path("search", SearchQuoteSingleFieldList.as_view(), name="search_quote"),
+    path("search", SearchQuoteMultiFieldList.as_view(), name="search_quote"),
 ]
