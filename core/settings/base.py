@@ -18,6 +18,7 @@ LOCAL_APPS = [
 
 THIRDPARTY_APPS = [
     "debug_toolbar",
+    "django.contrib.postgres",
 ]
 
 

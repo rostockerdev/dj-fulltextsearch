@@ -10,7 +10,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         fake = Faker()
 
-        for _ in range(100):
+        for _ in range(1000):
             Quote.objects.create(name=fake.name(), quote=fake.text())
 
         print("Insertion Completed ...")
