@@ -11,10 +11,6 @@
     <div class="container">
         <h2 style="color: purple;">Search Quotes</h2>
         <br><br>
-        <form action="{% url 'quotes:search_quote' %}" method="GET">
-            <input type="search" name="q" placeholder="Search by name | quote" class="form-control">
-        </form>
-        <br><br>
         {% if quotes %}
             {% for quote in  quotes%}
                 <ul>
@@ -24,6 +20,8 @@
         {% else %}
             <p>No results found.</p>
         {% endif %}
+
+        <a href="{% url 'quotes:all_quotes' %}" class="btn btn-primary">All Quotes</a>
         <br><br>
     </div>
 </body>

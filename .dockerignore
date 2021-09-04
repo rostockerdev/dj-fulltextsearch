@@ -16,6 +16,7 @@ venv/
 
 # Databases
 *.sqlite3
+db/
 
 # Migrations
 migrations/
@@ -25,11 +26,11 @@ node_modules/
 build
 
 # Environment Variables
-.env 
+# .env 
 
 # Assets
 static/
 media/
 assets/
-# requirementsdev.txt
-# Info.md
+requirementsdev.txt
+Info.md
